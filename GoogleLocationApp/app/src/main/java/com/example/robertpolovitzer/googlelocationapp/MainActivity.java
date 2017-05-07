@@ -72,7 +72,10 @@ public class MainActivity extends AppCompatActivity {
             Log.e(TAG, "" + longitude);
             Log.e(TAG, "" + latitude);
 
-            String url = "https://www.google.ca/maps/dir/" + latitude + "," + longitude + "/46.8283627,-71.2421034/@" + latitude + "," + longitude + ",14z";
+            double direction_latitude = 46.8283627;
+            double direction_longitude = -71.2421034;
+
+            String url = "https://www.google.ca/maps/dir/" + latitude + "," + longitude + "/" + direction_latitude + "," + direction_longitude + "/@" + latitude + "," + longitude + ",14z";
             webView.loadUrl(url);
 
         } else {
